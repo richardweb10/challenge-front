@@ -7,7 +7,7 @@ export default async function handler(
     res: NextApiResponse<any>
 ) {
     await axios({
-        method: req.method,
+        method: req.method == 'PATCH'? 'PUT':req.method,
         url: (config.url_api && req.body.url)? (config.url_api + req.body.url):'',
         data: req.body,
         headers: {
