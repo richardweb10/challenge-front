@@ -1,0 +1,30 @@
+
+/* ############################### USER ####################### */
+
+export const GET_USERS = 'GET_USERS';
+export const GET_USERS_RECEIVED = 'GET_USERS_RECEIVED';
+export const GET_USERS_FAILED = 'GET_USERS_FAILED';
+
+export const GET_POSTS_BY_USER = 'GET_POSTS_BY_USER';
+export const GET_POSTS_BY_USER_RECEIVED = 'GET_POSTS_BY_USER_RECEIVED';
+export const GET_POSTS_BY_USER_FAILED = 'GET_POSTS_BY_USER_FAILED';
+
+export const GET_ALBUMS_BY_USER = 'GET_ALBUMS_BY_USER';
+export const GET_ALBUMS_BY_USER_RECEIVED = 'GET_ALBUMS_BY_USER_RECEIVED';
+export const GET_ALBUMS_BY_USER_FAILED = 'GET_ALBUMS_BY_USER_FAILED';
+
+export const UPDATE_USER = 'UPDATE_USER';
+export const UPDATE_USER_RECEIVED = 'UPDATE_USER_RECEIVED';
+export const UPDATE_USER_FAILED = 'UPDATE_USER_FAILED';
+
+export const CREATE_USER = 'CREATE_USER';
+export const CREATE_USER_RECEIVED = 'CREATE_USER_RECEIVED';
+export const CREATE_USER_FAILED = 'CREATE_USER_FAILED';
+
+export const CREATE_USER_CLEAR = 'CREATE_USER_CLEAR';
+
+export const GET_USERS_BY_USER = 'GET_USERS_BY_USER';
+export const GET_USERS_BY_USER_RECEIVED = 'GET_USERS_BY_USER_RECEIVED';
+export const GET_USERS_BY_USER_FAILED = 'GET_USERS_BY_USER_FAILED';
+
+/* ############################# END USERS ################### */

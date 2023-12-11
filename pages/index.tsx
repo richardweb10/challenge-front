@@ -1,118 +1,47 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import UserList from '../components/user/userList';
+import Layout from '../components/layout'
 
-const inter = Inter({ subsets: ['latin'] })
+export default function user() {
+    return (
+        <Layout>
+            <div className=' h-20 w-full p-5' style={{ background: '#8556AA' }}>
+                <div className={`cotainer w-3/5 mx-auto flex justify-evenly`}>
+                    <div className='flex'>
+                        <svg width="50" height="52" viewBox="0 0 50 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.067 22.7732C11.0603 17.8518 14.2411 13.7545 18.5156 11.6652C18.9174 12.2339 21.6406 16.1687 24.1741 20.8348C17.0312 22.808 10.7478 22.7848 10.067 22.7732ZM35.1116 14.1607C31.3616 10.7018 26.2612 9.39018 21.4286 10.6089C21.8527 11.2009 24.6205 15.1241 27.1205 19.8946C32.5446 17.7705 34.8326 14.567 35.1116 14.1607ZM15.6362 38.5357C20.1562 42.2036 26.0491 42.7955 30.9598 40.625C30.7366 39.2321 29.8438 34.3804 27.7009 28.6C21.5513 30.7821 17.2321 35.1464 15.6362 38.5357ZM26.6629 25.9768C26.2835 25.0714 25.8594 24.1777 25.4241 23.2839C17.8125 25.6518 10.4241 25.5589 9.75446 25.5357C9.75446 25.6982 9.7433 25.8607 9.7433 26.0232C9.7433 30.0973 11.2277 33.8116 13.6607 36.6321C16.1384 32.233 21.1496 27.5902 26.6629 25.9768ZM30.558 27.8687C32.5558 33.5679 33.3594 38.2107 33.5156 39.1741C36.942 36.7714 39.375 32.9527 40.0558 28.542C39.5424 28.3679 35.3348 27.0679 30.558 27.8687ZM28.2924 22.2509C28.8281 23.3884 29.2188 24.317 29.6317 25.3616C34.7098 24.7 39.7545 25.7562 40.2567 25.8723C40.2232 22.1232 38.9397 18.6875 36.808 15.9946C36.4844 16.4473 33.9286 19.8482 28.2924 22.2509ZM50 5.57143V46.4286C50 49.5045 47.6004 52 44.6429 52H5.35714C2.39955 52 0 49.5045 0 46.4286V5.57143C0 2.49554 2.39955 0 5.35714 0H44.6429C47.6004 0 50 2.49554 50 5.57143ZM42.8571 26C42.8571 15.7625 34.8438 7.42857 25 7.42857C15.1562 7.42857 7.14286 15.7625 7.14286 26C7.14286 36.2375 15.1562 44.5714 25 44.5714C34.8438 44.5714 42.8571 36.2375 42.8571 26Z" fill="white" />
+                        </svg>
+                        
+                        <div className='flex flex-col ml-3'>
+                            <label className=' text-base font-bold text-white'>Tipo de cancha</label>
+                            <label className=' text-base font-light text-white'>sociedad</label>
 
-export default function Home() {
-  return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+                        </div>
+                    </div>
+                    <div className='flex'>
+                        <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.55305 32.75H28.197C28.3681 32.7501 28.5376 32.7165 28.6958 32.6511C28.8539 32.5856 28.9976 32.4897 29.1186 32.3686C29.2397 32.2476 29.3356 32.1039 29.4011 31.9458C29.4665 31.7876 29.5001 31.6181 29.5 31.447V27.553C29.5001 27.3819 29.4665 27.2124 29.4011 27.0542C29.3356 26.8961 29.2397 26.7524 29.1186 26.6314C28.9976 26.5103 28.8539 26.4144 28.6958 26.3489C28.5376 26.2835 28.3681 26.2499 28.197 26.25H1.55305C1.38189 26.2499 1.21239 26.2835 1.05423 26.3489C0.896082 26.4144 0.752382 26.5103 0.631356 26.6314C0.51033 26.7524 0.414354 26.8961 0.348917 27.0542C0.28348 27.2124 0.249867 27.3819 0.25 27.553V31.447C0.249867 31.6181 0.28348 31.7876 0.348917 31.9458C0.414354 32.1039 0.51033 32.2476 0.631356 32.3686C0.752382 32.4897 0.896082 32.5856 1.05423 32.6511C1.21239 32.7165 1.38189 32.7501 1.55305 32.75ZM1.55305 6.75H28.197C28.3681 6.75013 28.5376 6.71652 28.6958 6.65108C28.8539 6.58565 28.9976 6.48967 29.1186 6.36864C29.2397 6.24762 29.3356 6.10392 29.4011 5.94577C29.4665 5.78761 29.5001 5.61811 29.5 5.44695V1.55305C29.5001 1.38189 29.4665 1.21239 29.4011 1.05423C29.3356 0.896082 29.2397 0.752382 29.1186 0.631356C28.9976 0.51033 28.8539 0.414354 28.6958 0.348917C28.5376 0.28348 28.3681 0.249867 28.197 0.25H1.55305C1.38189 0.249867 1.21239 0.28348 1.05423 0.348917C0.896082 0.414354 0.752382 0.51033 0.631356 0.631356C0.51033 0.752382 0.414354 0.896082 0.348917 1.05423C0.28348 1.21239 0.249867 1.38189 0.25 1.55305V5.44695C0.249867 5.61811 0.28348 5.78761 0.348917 5.94577C0.414354 6.10392 0.51033 6.24762 0.631356 6.36864C0.752382 6.48967 0.896082 6.58565 1.05423 6.65108C1.21239 6.71652 1.38189 6.75013 1.55305 6.75ZM44.125 13.25H1.875C1.44402 13.25 1.0307 13.4212 0.725952 13.726C0.421205 14.0307 0.25 14.444 0.25 14.875V18.125C0.25 18.556 0.421205 18.9693 0.725952 19.274C1.0307 19.5788 1.44402 19.75 1.875 19.75H44.125C44.556 19.75 44.9693 19.5788 45.274 19.274C45.5788 18.9693 45.75 18.556 45.75 18.125V14.875C45.75 14.444 45.5788 14.0307 45.274 13.726C44.9693 13.4212 44.556 13.25 44.125 13.25ZM44.125 39.25H1.875C1.44402 39.25 1.0307 39.4212 0.725952 39.726C0.421205 40.0307 0.25 40.444 0.25 40.875V44.125C0.25 44.556 0.421205 44.9693 0.725952 45.274C1.0307 45.5788 1.44402 45.75 1.875 45.75H44.125C44.556 45.75 44.9693 45.5788 45.274 45.274C45.5788 44.9693 45.75 44.556 45.75 44.125V40.875C45.75 40.444 45.5788 40.0307 45.274 39.726C44.9693 39.4212 44.556 39.25 44.125 39.25Z" fill="white" />
+                        </svg>
+                        <div className='flex flex-col ml-3'>
+                            <label className=' text-base font-bold text-white'>Nivel</label>
+                            <label className=' text-base font-light text-white'>semiprofesional</label>
+                        </div>
+                    </div>
+                    <div className='flex'>
+                        <svg width="52" height="48" viewBox="0 0 52 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M49.8333 6.66669H40.4444V3.05558C40.4444 1.85489 39.4785 0.888916 38.2778 0.888916H13.7222C12.5215 0.888916 11.5556 1.85489 11.5556 3.05558V6.66669H2.16667C0.965972 6.66669 0 7.63267 0 8.83336V13.8889C0 17.1118 2.03125 20.425 5.58819 22.9799C8.43194 25.0292 11.8896 26.3292 15.5187 26.7445C18.3535 31.4479 21.6667 33.3889 21.6667 33.3889V39.8889H17.3333C14.1465 39.8889 11.5556 41.7577 11.5556 44.9445V46.0278C11.5556 46.6236 12.0431 47.1111 12.6389 47.1111H39.3611C39.9569 47.1111 40.4444 46.6236 40.4444 46.0278V44.9445C40.4444 41.7577 37.8535 39.8889 34.6667 39.8889H30.3333V33.3889C30.3333 33.3889 33.6465 31.4479 36.4813 26.7445C40.1194 26.3292 43.5771 25.0292 46.4118 22.9799C49.9597 20.425 52 17.1118 52 13.8889V8.83336C52 7.63267 51.034 6.66669 49.8333 6.66669ZM8.96458 18.2945C6.76181 16.7056 5.77778 14.9361 5.77778 13.8889V12.4445H11.5736C11.6639 15.3875 12.0972 17.9695 12.7292 20.2264C11.366 19.757 10.0931 19.107 8.96458 18.2945ZM46.2222 13.8889C46.2222 15.3424 44.6243 17.1479 43.0354 18.2945C41.9069 19.107 40.625 19.757 39.2618 20.2264C39.8937 17.9695 40.3271 15.3875 40.4174 12.4445H46.2222V13.8889Z" fill="white" />
+                        </svg>
+                        <div className='flex flex-col ml-3'>
+                            <label className=' text-base font-bold text-white'>Victorias</label>
+                            <label className=' text-base font-light text-white'>345</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <main
+                className={`cotainer w-3/5 mx-auto`}
+            >
+                <UserList />
+            </main>
+        </Layout>
+    )
 }
