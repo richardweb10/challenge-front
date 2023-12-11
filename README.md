@@ -8,7 +8,10 @@ First, install dependencies:
 npm install
 ```
 
-Second, run the development server:
+Second,  create the .env file with the example listed in the .env.example file
+
+
+Third, run the development server:
 
 ```bash
 npm run dev
